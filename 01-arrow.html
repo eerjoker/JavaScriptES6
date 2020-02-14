@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		// ANTES
+		/*
+		var x = function(a){
+			return a;
+		}
+		console.log(x("Hola"));
+		*/
+		
+		// FAT ARROW
+
+		//Con un parámetro
+		/*
+		var x = a => a;
+
+		console.log(x("Hola"));
+		*/
+	
+		// Con varios parámetros
+		/*
+		var x = (a,b) => a+" "+b;
+
+		console.log(x("Hola", "crayola"));
+		*/
+		
+		// Sin parámetros
+		/*
+		var x = () => "Hola hola";
+
+		console.log(x());
+		*/
+
+		// Llamar a la función desde otra función
+		/*
+		setTimeout(()=>alert("Hola, desde ES6"), 1000);
+		*/
+
+		//Más de una instrucción
+		var x = () => {a = "Hola"; b = "crayola"; alert(a+" "+b);}
+		x();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

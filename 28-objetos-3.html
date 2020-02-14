@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos - Nombre Propiedad calculada</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		let obj = {
+			foo: "bar",
+			["id " + num()]: 4
+		}
+
+		console.log(obj);
+
+		function num(){
+			return Math.floor(Math.random()*10);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

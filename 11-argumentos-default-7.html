@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valores por default en argumentos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function f([x, y] = [1, 2], {z: z} = {z: 3}){
+			return x + y + z;
+		}
+
+		console.log(f()); // 6
+	</script>
+</head>
+<body>
+
+</body>
+</html>

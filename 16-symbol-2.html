@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Symbol</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var sym = Symbol("foo");
+		console.log(typeof sym); // "symbol"
+
+		var symObj = Object(sym);
+		console.log(typeof(symObj)); // "object"
+	</script>
+</head>
+<body>
+
+</body>
+</html>

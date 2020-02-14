@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Argumentos Extendidos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function f(x, y, ...a){
+			return (x + y) * a.length
+		}
+		console.log(f(1, 2, "hello", true, 7)) // 9
+	</script>
+</head>
+<body>
+
+</body>
+</html>

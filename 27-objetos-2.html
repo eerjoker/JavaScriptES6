@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos - Métodos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// Antes
+		/*
+		obj = {
+			suma: function(a, b){return a+b}
+		}
+		*/
+
+		// Ahora
+
+		obj = {
+			suma(a, b){return a+b},
+			multiplicacion(x, y){return x*y},
+			*num(x,y){}
+		}
+
+		console.log(obj.suma(10, 3));
+		console.log(obj.multiplicacion(10, 3));
+	</script>
+</head>
+<body>
+
+</body>
+</html>
