@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promises</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		let miPromesa = new Promise(function(todoBien, todoMal){
+			let resultado= true;
+
+			if(resultado){
+				todoBien("listo");
+			} else {
+				todoMal("algo falló");
+			};
+		});
+
+		miPromesa.then(function(resultado){
+			console.log("El resultado es "+resultado);
+		})
+		.catch(function(resultado){
+			console.log("El resultado es "+resultado);
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>isNaN, isFinite</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		console.log(Number.isNaN(42)) // false
+		console.log(Number.isNaN(NaN)) // true
+
+		console.log(Number.isFinite(Infinity)) // false
+		console.log(Number.isFinite(-Infinity)) // false
+		console.log(Number.isFinite(NaN)) // false
+		console.log(Number.isFinite(123)) // true
+	</script>
+</head>
+<body>
+
+</body>
+</html>

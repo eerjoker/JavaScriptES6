@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promises</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		let promesaPrimera = function(){
+			return new Promise(function(resolve, reject){
+				resolve('Primera Promesa lista');
+			});
+		};
+
+		let promesaSegunda = function(){
+			return new Promise(function(resolve, reject){
+				resolve('Segunda Promesa lista');
+			});
+		};
+
+		let promesaTercera = function(){
+			return new Promise(function(resolve, reject){
+				resolve('Tercera Promesa lista');
+			});
+		};
+
+		Promise.all([promesaPrimera(), promesaSegunda(), promesaTercera()]).then(function(respuestas){
+			respuestas.forEach(function(msg){console.log(msg)});
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
