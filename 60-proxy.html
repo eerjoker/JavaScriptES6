@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proxy básico</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		const target = function(nombre, apellido){
+			console.log("Mi nombre es",nombre,apellido);
+		}
+
+		const handler = {
+			apply: function(target, valor, args){
+				console.log(`Se ha llamado la función ${target.name} con los parámetros ${args}`);
+				return target(...args);
+			}
+		}
+
+		var p = new Proxy(target,handler);
+		p("Pedro","Picapiedra"); // se indican los parámetros de la función target
+	</script>
+</head>
+<body>
+
+</body>
+</html>

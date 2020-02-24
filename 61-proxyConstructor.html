@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proxy - Constructor</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		const DateProxy = new Proxy(Date, {
+			construct(target, args){
+				console.log("Creamos una fecha");
+				return new target(...args); // puede ir tanto target como Date
+			}
+		});
+
+		let fecha = new DateProxy(2019,6,7); // si queda vacío toma la fecha del día actual
+		console.log(fecha);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

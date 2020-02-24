@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Proxy - Set, Delete</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		const auto = {
+			placas: "123abc",
+			marca: "Ford",
+			año: 2015,
+			modelo: "T",
+			color: "Negro"
+		}
+
+		const handler = {
+			get: function(target, prop, proxy){
+				if (prop === "marca"){
+					return `Auto marca: ${target[prop]}`
+				} else if (prop === "modelo"){
+					return `Auto modelo: ${target[prop]}`
+				} else if (prop === "todo"){
+					return `Auto modelo: ${target["marca"]} ${target["modelo"]} ${target["color"]}`
+				} else {
+					return target[prop];
+				}
+			},
+			set: function(target, prop, valor){
+				if (prop==="marca" || prop==="modelo"){
+					console.log(`No se puede modificar la propiedad ${prop}`);
+				} else {
+					target[prop] = valor;
+				}
+			},
+			deleteProperty: function(target, prop){
+				console.log("No puedes elminar ninguna propiedad");
+			}
+		}
+
+		var miAuto = new Proxy(auto, handler);
+		console.log(miAuto.todo);
+
+		miAuto.marca = "Nissan";
+		miAuto.placas = "abc123";
+		console.log(miAuto.placas);
+
+		delete miAuto.placas;
+	</script>
+</head>
+<body>
+
+</body>
+</html>
